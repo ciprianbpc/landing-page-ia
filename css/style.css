@@ -40,14 +40,29 @@ nav .container {
 }
 
 nav .font-bold {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: var(--primary);
-  letter-spacing: -1px;
+  letter-spacing: -2px;
+  font-weight: 900;
+  font-family: "Inter", "Space Grotesk", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   transition: color 0.3s;
+  text-shadow: 0 2px 12px rgba(78, 13, 117, 0.1);
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 nav .font-bold span {
   color: var(--accent);
+  font-size: 2.4rem;
+  font-weight: 900;
+  margin-left: 0.1em;
+  text-shadow: 0 2px 8px rgba(20, 184, 166, 0.15);
+  letter-spacing: 0;
+  vertical-align: middle;
 }
 
 nav a {
@@ -62,8 +77,8 @@ nav a {
 
 nav a:hover,
 nav .nav-link.active {
-  background: linear-gradient(90deg, var(--primary), var(--accent));
-  color: #fff;
+  background: linear-gradient(90deg, #e9dcef 60%, var(--accent) 100%);
+  color: #2d1152; /* Color más oscuro para mejor legibilidad */
   box-shadow: 0 2px 8px rgba(78, 13, 117, 0.12);
 }
 
@@ -85,32 +100,39 @@ nav .nav-link.active {
   transform: scale(1.05) translateY(-2px);
 }
 
-/* Hero Section */
+/* Hero Section - fondo claro y H1 destacado */
 #hero-section {
-  background: linear-gradient(
-    135deg,
-    var(--primary-hover) 0%,
-    var(--primary) 100%
-  );
-  color: white;
+  background: linear-gradient(135deg, #fff 0%, #e9dcef 100%);
+  color: var(--primary);
   position: relative;
   overflow: hidden;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
+
 #hero-section h1 {
-  background: linear-gradient(90deg, var(--primary), var(--accent));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 2.5rem;
+  color: #0a0a0a; /* Negro intenso para máxima legibilidad */
+  font-size: 3rem;
   font-weight: 900;
   letter-spacing: -1px;
+  text-shadow: 0 4px 24px rgba(78, 13, 117, 0.1), 0 1px 0 #fff;
+  background: none;
+  margin-bottom: 1.5rem;
+  line-height: 1.15;
   animation: fadeInDown 1s;
 }
+
 #hero-section p {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
+  color: #4e0d75;
   opacity: 0.95;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  display: inline-block;
   animation: fadeInUp 1.2s;
 }
+
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -313,6 +335,11 @@ footer {
 @media (max-width: 768px) {
   #hero-section h1 {
     font-size: 2rem;
+    padding: 0 0.5rem;
+  }
+  #hero-section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
   .section-heading {
     font-size: 1.5rem;
